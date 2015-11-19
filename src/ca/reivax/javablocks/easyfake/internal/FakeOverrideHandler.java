@@ -19,7 +19,6 @@ public class FakeOverrideHandler implements MethodHandler, FakeOverride
 
 	private boolean record = true;
 
-	@Override
 	public Object invoke(Object self, Method method, Method proceed, Object[] args) throws Throwable
 	{
 		if (method.getDeclaringClass().equals(FakeOverride.class))
@@ -56,19 +55,16 @@ public class FakeOverrideHandler implements MethodHandler, FakeOverride
 		}
 	}
 
-	@Override
 	public void with(FakeMethod body)
 	{
 		methodBodies.put(lastMethod, body);
 	}
 
-	@Override
 	public void andReturn(Object returnValue)
 	{
 		methodBodies.put(lastMethod, new FakeReturn(returnValue));
 	}
 
-	@Override
 	public void startFaking()
 	{
 		record = false;

@@ -48,7 +48,6 @@ public class EasyFakeTest
 
 		EasyFake.override(bean.getter()).with(new FakeMethod<String>()
 			{
-				@Override
 				public String fake(Object[] args)
 				{
 					return "TEST";
@@ -75,7 +74,6 @@ public class EasyFakeTest
 		
 		EasyFake.voidOverride().with(new FakeMethod<Void>()
 			{
-				@Override
 				public Void fake(Object[] args)
 				{
 					return null;

@@ -5,7 +5,6 @@ package ca.reivax.javablocks;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -44,7 +43,6 @@ public class MixinHandler implements MethodHandler
 		 * 
 		 * @see javassist.util.proxy.MethodHandler#invoke(java.lang.Object, java.lang.reflect.Method, java.lang.reflect.Method, java.lang.Object[])
 		 */
-		@Override
 		public Object invoke(Object self, Method method, Method proceed, Object[] args) throws Throwable
 		{
 			try
@@ -100,7 +98,6 @@ public class MixinHandler implements MethodHandler
 	 * 
 	 * @see javassist.util.proxy.MethodHandler#invoke(java.lang.Object, java.lang.reflect.Method, java.lang.reflect.Method, java.lang.Object[])
 	 */
-	@Override
 	public Object invoke(Object self, Method method, Method proceed, Object[] args) throws Throwable
 	{
 		try

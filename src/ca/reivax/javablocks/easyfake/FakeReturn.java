@@ -9,7 +9,6 @@ public class FakeReturn<T> implements FakeMethod<T>
 		this.returnValue = returnValue;
 	}
 	
-	@Override
 	public T fake(Object[] args)
 	{
 		return returnValue;

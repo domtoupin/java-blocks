@@ -22,7 +22,6 @@ public class TotoImpl implements Toto
 		intercept = true;
 	}
 	
-	@Override
 	public String testToto()
 	{
 		return "testToto";
@@ -31,7 +30,6 @@ public class TotoImpl implements Toto
 	/**
 	 * @return the intercept
 	 */
-	@Override
 	public boolean isIntercept()
 	{
 		return intercept;
@@ -40,7 +38,6 @@ public class TotoImpl implements Toto
 	/* (non-Javadoc)
 	 * @see ca.reivax.javablocks.Toto#mustAddToList(java.lang.String)
 	 */
-	@Override
 	public void mustAddToList(String string)
 	{
 		((List)this).add(string);
